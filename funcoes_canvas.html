@@ -20,6 +20,8 @@
         pincel.fillStyle = cor;
         pincel.fillRect(xi, yi, xf, yf); // x e y inicial e final
         pincel.fill();
+        pincel.strokeStyle='black'; // linha contorno
+        pincel.strokeRect(xi, yi, xf, yf);
     }
 
     function desenhaTexto(texto, x , y) {
@@ -29,6 +31,15 @@
         pincel.fillText(texto, x, y);
     }
 
+    function desenhaTriangulo(xa, ya, xb, yb, xc, yc, cor) {
+
+        pincel.fillStyle= cor;
+        pincel.beginPath();
+        pincel.moveTo(xa, ya);
+        pincel.lineTo(xb, yb);
+        pincel.lineTo(xc, yc);
+        pincel.fill();
+    }
 
 
 </script>
